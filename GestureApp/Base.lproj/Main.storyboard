@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tokyo_japan_city_night_lights_63139_3840x2160.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gZe-kV-Xaj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="niss12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-ae-UmM">
+                                <rect key="frame" x="33" y="215" width="308" height="260"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewy-SH-C3b">
+                                <rect key="frame" x="16" y="39" width="343" height="63"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made in Japan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mLV-rA-VMG" userLabel="Made in Japan">
+                                <rect key="frame" x="0.0" y="555" width="375" height="112"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eIx-ae-UmM" secondAttribute="trailing" constant="34" id="050-UW-tfo"/>
+                            <constraint firstItem="mLV-rA-VMG" firstAttribute="bottom" secondItem="gZe-kV-Xaj" secondAttribute="bottom" id="6Dp-un-bor"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eIx-ae-UmM" secondAttribute="bottom" constant="192" id="71t-Z9-Tpf"/>
+                            <constraint firstItem="Ewy-SH-C3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9jF-pE-tbt"/>
+                            <constraint firstItem="eIx-ae-UmM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="195" id="MrK-yW-RbB"/>
+                            <constraint firstItem="eIx-ae-UmM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="PRJ-59-d5k"/>
+                            <constraint firstItem="gZe-kV-Xaj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ted-yH-c1b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ewy-SH-C3b" secondAttribute="trailing" constant="16" id="U60-Pf-hlA"/>
+                            <constraint firstItem="mLV-rA-VMG" firstAttribute="top" secondItem="eIx-ae-UmM" secondAttribute="bottom" constant="80" id="UDk-Pm-zZh"/>
+                            <constraint firstItem="gZe-kV-Xaj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wy5-tN-rCT"/>
+                            <constraint firstItem="mLV-rA-VMG" firstAttribute="leading" secondItem="gZe-kV-Xaj" secondAttribute="leading" id="bpE-cg-RFh"/>
+                            <constraint firstItem="mLV-rA-VMG" firstAttribute="trailing" secondItem="gZe-kV-Xaj" secondAttribute="trailing" id="c2b-r3-9Th"/>
+                            <constraint firstItem="gZe-kV-Xaj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sFG-IQ-zdE"/>
+                            <constraint firstItem="Ewy-SH-C3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="x9k-x4-FuZ"/>
+                            <constraint firstItem="gZe-kV-Xaj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y97-k8-WDo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="eIx-ae-UmM" id="nEv-jE-cr3"/>
+                        <outlet property="madeInJapanLabel" destination="mLV-rA-VMG" id="LUM-Ex-Zbm"/>
+                        <outlet property="showLabel" destination="Ewy-SH-C3b" id="DCJ-3W-uMi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="niss12.jpg" width="500" height="333"/>
+        <image name="tokyo_japan_city_night_lights_63139_3840x2160.jpg" width="3840" height="2160"/>
+    </resources>
+</document>
