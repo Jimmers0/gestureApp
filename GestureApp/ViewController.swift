@@ -17,12 +17,14 @@ class ViewController: UIViewController {
   @IBOutlet weak var imgView: UIImageView!
   @IBOutlet weak var showLabel: UILabel!
   @IBOutlet weak var madeInJapanLabel: UILabel!
+  @IBOutlet weak var unitsSoldLbl: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     format()
     dateLabel.text = formattedDate()
+    unitsSoldLbl.text = formattedUnitsSold()
     madeInJapanLabel.isHidden = true
     showLabel.isHidden = false
     
@@ -71,6 +73,12 @@ class ViewController: UIViewController {
     
     date = myStringafd
     dateLabel.text = date
+  }
+  
+  func formattedUnitsSold() -> String {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .spellOut
+    return numberFormatter.string(from: 44000)!
   }
   
   @objc func pinchGesture(sender: UIPinchGestureRecognizer) {
