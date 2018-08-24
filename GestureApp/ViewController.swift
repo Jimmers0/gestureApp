@@ -11,6 +11,9 @@ import Flurry_iOS_SDK
 
 class ViewController: UIViewController {
   
+ var date = "01-28-1994"
+  
+  @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var imgView: UIImageView!
   @IBOutlet weak var showLabel: UILabel!
   @IBOutlet weak var madeInJapanLabel: UILabel!
@@ -18,6 +21,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    format()
+    dateLabel.text = formattedDate()
     madeInJapanLabel.isHidden = true
     showLabel.isHidden = false
     
@@ -41,6 +46,31 @@ class ViewController: UIViewController {
     
     imgView.gestureRecognizers = [pinchGesture, panGesture, rotationGesture, longPressGesture, tapGesture]
     
+  }
+  
+  func formattedDate() -> String {
+    let date = Date()
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    return dateFormatter.string(from: date)
+  }
+  
+  func format() {
+    let formatter = DateFormatter()
+    // initially set the format based on your datepicker date / server String
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    
+    let myString = formatter.string(from: Date()) // string purpose I add here
+    // convert your string to date
+    let yourDate = formatter.date(from: myString)
+    //then again set the date format whhich type of output you need
+    formatter.dateFormat = "MM-dd-yyyy"
+    // again convert your date to string
+    let myStringafd = formatter.string(from: yourDate!)
+    
+    date = myStringafd
+    dateLabel.text = date
   }
   
   @objc func pinchGesture(sender: UIPinchGestureRecognizer) {

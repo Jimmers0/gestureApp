@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ChalkboardSE.ttc">
-            <string>ChalkboardSE-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -41,21 +36,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gze-30-HOo">
+                                <rect key="frame" x="16" y="20" width="210" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VNx-h0-sFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.0" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eIx-ae-UmM" secondAttribute="trailing" constant="34" id="050-UW-tfo"/>
+                            <constraint firstItem="Gze-30-HOo" firstAttribute="leading" secondItem="Ewy-SH-C3b" secondAttribute="leading" id="0YL-a5-pQs"/>
                             <constraint firstItem="mLV-rA-VMG" firstAttribute="bottom" secondItem="gZe-kV-Xaj" secondAttribute="bottom" id="6Dp-un-bor"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eIx-ae-UmM" secondAttribute="bottom" constant="192" id="71t-Z9-Tpf"/>
                             <constraint firstItem="Ewy-SH-C3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9jF-pE-tbt"/>
                             <constraint firstItem="eIx-ae-UmM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="195" id="MrK-yW-RbB"/>
                             <constraint firstItem="eIx-ae-UmM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="PRJ-59-d5k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gze-30-HOo" secondAttribute="trailing" constant="149" id="SKx-xc-bHo"/>
                             <constraint firstItem="gZe-kV-Xaj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ted-yH-c1b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ewy-SH-C3b" secondAttribute="trailing" constant="16" id="U60-Pf-hlA"/>
                             <constraint firstItem="mLV-rA-VMG" firstAttribute="top" secondItem="eIx-ae-UmM" secondAttribute="bottom" constant="80" id="UDk-Pm-zZh"/>
                             <constraint firstItem="gZe-kV-Xaj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wy5-tN-rCT"/>
                             <constraint firstItem="mLV-rA-VMG" firstAttribute="leading" secondItem="gZe-kV-Xaj" secondAttribute="leading" id="bpE-cg-RFh"/>
                             <constraint firstItem="mLV-rA-VMG" firstAttribute="trailing" secondItem="gZe-kV-Xaj" secondAttribute="trailing" id="c2b-r3-9Th"/>
+                            <constraint firstItem="Gze-30-HOo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hbP-oC-bLb"/>
                             <constraint firstItem="gZe-kV-Xaj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sFG-IQ-zdE"/>
                             <constraint firstItem="Ewy-SH-C3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="x9k-x4-FuZ"/>
                             <constraint firstItem="gZe-kV-Xaj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y97-k8-WDo"/>
@@ -63,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="Gze-30-HOo" id="5t8-SM-OGt"/>
                         <outlet property="imgView" destination="eIx-ae-UmM" id="nEv-jE-cr3"/>
                         <outlet property="madeInJapanLabel" destination="mLV-rA-VMG" id="LUM-Ex-Zbm"/>
                         <outlet property="showLabel" destination="Ewy-SH-C3b" id="DCJ-3W-uMi"/>
